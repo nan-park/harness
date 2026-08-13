@@ -1,0 +1,19 @@
+# 설치기가 만드는 백업 — 배포본(~/.claude) 쪽에 생기지만 실수로 들어오는 것을 막는다
+*.bak.*
+
+# v0.1에서 저장소 안에 두었던 레거시 이탈 기록. 업그레이드한 사용자의 기존 기록이
+# 실수로 공개되지 않도록 계속 제외한다. 새 기본 경로는 ~/.claude/harness/ 이다.
+journal/private/drift-log.md
+
+# 로컬 전용 Claude Code 설정 — 기기마다 다르므로 공유하지 않는다.
+# 전역 git ignore 에만 의존하면 그 파일이 없는 다른 기기에서 정본에 커밋된다.
+.claude/settings.local.json
+
+# macOS
+.DS_Store
+._*
+
+# 에디터
+.vscode/
+.idea/
+*.swp
